@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:formulario/pantallas/perfil_usuario/menu_desplegable.dart';
 
 class BarraNavegacionDiagonal extends StatelessWidget implements PreferredSizeWidget {
+
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
@@ -23,7 +23,19 @@ class BarraNavegacionDiagonal extends StatelessWidget implements PreferredSizeWi
           ],
         ),
         actions: <Widget>[
-          MenuDesplegable(),
+          GestureDetector(
+            onTap: () {
+              // Lógica al presionar el botón de usuario
+            },
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset(
+                'assets/icons/usuario.png',
+                width: 60,
+                height: 60,
+              ),
+            ),
+          ),
         ],
         elevation: 0,
         backgroundColor: Colors.transparent,
