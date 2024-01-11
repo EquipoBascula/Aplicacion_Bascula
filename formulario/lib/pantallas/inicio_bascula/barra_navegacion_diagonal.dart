@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class BarraNavegacionDiagonal extends StatelessWidget implements PreferredSizeWidget {
-
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
