@@ -1,15 +1,20 @@
+//Importa la biblioteca material.dart para elementos de la interfaz de usuario y 
+//la clase FormData para gestionar datos del formulario.
 import 'package:flutter/material.dart';
 import 'package:formulario/pantallas/funciones/Controladores_Texto.dart';
-
+//Widget Stateful que crea un menú desplegable para seleccionar el Tiempo.
+//Mantiene el estado de la opción seleccionada y actualiza el controlador de texto asociado.
 class TiempoE extends StatefulWidget {
   @override
   State<TiempoE> createState(){
     return StateTiempoE();
   }
 }
+//Gestiona el estado interno del widget TiempoE.
 class StateTiempoE extends State<TiempoE> {
   final FormData formData = FormData(); // Instancia del Singleton
   String? _TiempoSeleccionado;
+    //opciones que el usuario podra seleccionar
   var _items = ['20 min', '30 min', '40 min', '50 min', '1 hr', '+ 1 hr'];
 
   @override
