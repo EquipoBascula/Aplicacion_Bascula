@@ -1,15 +1,21 @@
+//Importa la biblioteca material.dart para elementos de la interfaz de usuario y 
+//la clase FormData para gestionar datos del formulario.
 import 'package:flutter/material.dart';
 import 'package:formulario/pantallas/funciones/Controladores_Texto.dart';
-
+//Widget Stateful que crea un menú desplegable para seleccionar la discapacidad.
+//Mantiene el estado de la opción seleccionada y actualiza el controlador de texto asociado.
 class Discapacidad extends StatefulWidget {
   @override
   State<Discapacidad> createState(){
     return StateDiscapacidad();
   }
 }
+//Gestiona el estado interno del widget Discapacidad.
 class StateDiscapacidad extends State<Discapacidad> {
+   //Instancia de la clase FormData para acceder a los controladores de texto.
   final FormData formData = FormData(); // Instancia del Singleton
   String? _DiscaSeleccionada;
+  //opciones que el usuario podra seleccionar
   var _items = ['Ninguna', 'Discapacidad motora física', 'Discapacidad motora neurológica'];
 
   @override
