@@ -1,16 +1,21 @@
+//Importa la biblioteca material.dart para elementos de la interfaz de usuario y 
+//la clase FormData para gestionar datos del formulario.
 import 'package:flutter/material.dart';
 import 'package:formulario/pantallas/funciones/Controladores_Texto.dart';
-
+//Widget Stateful que crea un menú desplegable para seleccionar la lesion.
+//Mantiene el estado de la opción seleccionada y actualiza el controlador de texto asociado.
 class Lesion extends StatefulWidget {
   @override
   State<Lesion> createState(){
     return StateLesion();
   }
 }
-
+//Gestiona el estado interno del widget Lesion.
 class StateLesion extends State<Lesion> {
+  //Instancia de la clase FormData para acceder a los controladores de texto.
   final FormData formData = FormData(); // Instancia del Singleton
   String? _LesionSeleccionada;
+  //opciones que el usuario podra seleccionar
   var _items = ['Ninguna', 'En mi tren superior', 'En mi tren inferior'];
 
   @override
