@@ -1,16 +1,22 @@
+//Importa la biblioteca material.dart para elementos de la interfaz de usuario y 
+//la clase FormData para gestionar datos del formulario.
 import 'package:flutter/material.dart';
 import 'package:formulario/pantallas/funciones/Controladores_Texto.dart';
-
+//Widget Stateful que crea un menú desplegable para seleccionar el genero.
+//Mantiene el estado de la opción seleccionada y actualiza el controlador de texto asociado.
 class Genero extends StatefulWidget {
   @override
   State<Genero> createState(){
     return StateGenero();
   }
 }
+//Gestiona el estado interno del widget Genero
 class StateGenero extends State<Genero> {
+  //Instancia de la clase FormData para acceder a los controladores de texto.
   final FormData formData = FormData();
 
   String? _GeneroSeleccionado;
+  //opciones que el usuario podra seleccionar
   var _items = ['Masculino', 'Femenino', 'Otro'].toList();
 
   @override
