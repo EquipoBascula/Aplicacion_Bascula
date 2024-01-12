@@ -1,3 +1,4 @@
+//Importa bibliotecas para elementos de interfaz, navegación y widgets para la selección de opciones.
 import 'package:flutter/material.dart';
 import 'package:formulario/pantallas/formulario/agradecimiento.dart';
 import 'package:formulario/pantallas/formulario/form_parte3.dart';
@@ -66,6 +67,7 @@ class FormPart4 extends StatelessWidget {
                         IconButton(
                           onPressed: () {
                             Navigator.push(context, MaterialPageRoute(builder:
+                             //Utiliza Navigator.push() para navegar a otras pantallas.                                         
                                 (context) => Agradecimiento()));
                           },
                           icon: SizedBox(
