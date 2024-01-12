@@ -1,6 +1,8 @@
+//Importa la biblioteca material.dart para elementos de la interfaz de usuario y 
+//la clase FormData para gestionar datos del formulario.
 import 'package:flutter/material.dart';
 import 'package:formulario/pantallas/funciones/Controladores_Texto.dart';
-
+//Variables booleanas que indican si el usuario tiene alergia a cada alimento.
 bool? lacteos = false;
 bool? trigo = false;
 bool? soya = false;
@@ -12,11 +14,14 @@ bool? huevos = false;
 bool otro = false;
 
 class lista_alimentos extends StatefulWidget{
+  //Widget Stateful que crea una lista de casillas de verificación para seleccionar alergias alimentarias.
+  //Muestra un campo de texto adicional para especificar "otro" alimento si se selecciona la casilla correspondiente.
   const lista_alimentos({Key? key}) : super(key: key);
   @override
   State<lista_alimentos> createState() => seleccionListaAlimentos();
 }
 
+//Gestiona el estado interno del widget lista_alimentos
 class seleccionListaAlimentos extends State<lista_alimentos>{
   final FormData formData = FormData(); // Instancia del Singleton
   final TextEditingController otroalimento = TextEditingController();
@@ -30,6 +35,8 @@ class seleccionListaAlimentos extends State<lista_alimentos>{
             children: [ Transform.scale(scale: 1.7,
               child: Checkbox( value: lacteos,
                 onChanged: (bool? nval) {setState(() {lacteos = nval;
+                //actualiza la variable booleana correspondiente y llama a un método 
+              // de la clase FormData para guardar el valor en el controlador de texto asociado.
                 formData.setaLacteos(lacteos!);});},
                 activeColor: Colors.cyan,
                 checkColor: Colors.white,
@@ -43,6 +50,8 @@ class seleccionListaAlimentos extends State<lista_alimentos>{
               children: [ Transform.scale(scale: 1.7,
                 child: Checkbox( value: trigo,
                   onChanged: (bool? nval) {setState(() {trigo = nval;
+                  //actualiza la variable booleana correspondiente y llama a un método 
+              // de la clase FormData para guardar el valor en el controlador de texto asociado.
                   formData.setaTrigo(trigo!);});},
                   activeColor: Colors.cyan,
                   checkColor: Colors.white,
@@ -56,6 +65,8 @@ class seleccionListaAlimentos extends State<lista_alimentos>{
               children: [ Transform.scale(scale: 1.7,
                 child: Checkbox( value: soya,
                   onChanged: (bool? nval) {setState(() {soya = nval;
+                 //actualiza la variable booleana correspondiente y llama a un método 
+              // de la clase FormData para guardar el valor en el controlador de texto asociado.                                       
                   formData.setaSoya(soya!);});},
                   activeColor: Colors.cyan,
                   checkColor: Colors.white,
@@ -69,6 +80,8 @@ class seleccionListaAlimentos extends State<lista_alimentos>{
               children: [ Transform.scale(scale: 1.7,
                 child: Checkbox( value: pescado,
                   onChanged: (bool? nval) {setState(() {pescado = nval;
+                  //actualiza la variable booleana correspondiente y llama a un método 
+              // de la clase FormData para guardar el valor en el controlador de texto asociado.                                      
                   formData.setaPescado(pescado!);});},
                   activeColor: Colors.cyan,
                   checkColor: Colors.white,
@@ -82,6 +95,8 @@ class seleccionListaAlimentos extends State<lista_alimentos>{
               children: [ Transform.scale(scale: 1.7,
                 child: Checkbox( value: frutosSecos,
                   onChanged: (bool? nval) {setState(() {frutosSecos = nval;
+                 //actualiza la variable booleana correspondiente y llama a un método 
+              // de la clase FormData para guardar el valor en el controlador de texto asociado.                                       
                   formData.setaFrutosSecos(frutosSecos!);});},
                   activeColor: Colors.cyan,
                   checkColor: Colors.white,
@@ -95,6 +110,8 @@ class seleccionListaAlimentos extends State<lista_alimentos>{
               children: [ Transform.scale(scale: 1.7,
                 child: Checkbox( value: mani,
                   onChanged: (bool? nval) {setState(() {mani = nval;
+                  //actualiza la variable booleana correspondiente y llama a un método 
+              // de la clase FormData para guardar el valor en el controlador de texto asociado.                                      
                   formData.setaMani(mani!);});},
                   activeColor: Colors.cyan,
                   checkColor: Colors.white,
@@ -108,6 +125,8 @@ class seleccionListaAlimentos extends State<lista_alimentos>{
               children: [ Transform.scale(scale: 1.7,
                 child: Checkbox( value: mariscos,
                   onChanged: (bool? nval) {setState(() {mariscos = nval;
+                  //actualiza la variable booleana correspondiente y llama a un método 
+              // de la clase FormData para guardar el valor en el controlador de texto asociado.                                      
                   formData.setaMariscos(mariscos!);});},
                   activeColor: Colors.cyan,
                   checkColor: Colors.white,
@@ -121,6 +140,8 @@ class seleccionListaAlimentos extends State<lista_alimentos>{
               children: [ Transform.scale(scale: 1.7,
                 child: Checkbox( value: huevos,
                   onChanged: (bool? nval) {setState(() {huevos = nval;
+                  //actualiza la variable booleana correspondiente y llama a un método 
+              // de la clase FormData para guardar el valor en el controlador de texto asociado.                                      
                   formData.setaHuevos(huevos!);});},
                   activeColor: Colors.cyan,
                   checkColor: Colors.white,
@@ -150,6 +171,8 @@ class seleccionListaAlimentos extends State<lista_alimentos>{
             child: otro?
             TextField(
               controller: formData.otroAlimento_C,
+              //actualiza la variable booleana correspondiente y llama a un método 
+              // de la clase FormData para guardar el valor en el controlador de texto asociado.
               decoration: InputDecoration(
                 hintText: 'Ingresa otro alimento',
                 fillColor: Colors.blueGrey[200],
