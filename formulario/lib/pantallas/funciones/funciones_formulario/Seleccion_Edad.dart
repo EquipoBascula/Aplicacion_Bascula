@@ -1,16 +1,21 @@
+//Importa la biblioteca material.dart para elementos de la interfaz de usuario y 
+//la clase FormData para gestionar datos del formulario.
 import 'package:flutter/material.dart';
 import 'package:formulario/pantallas/funciones/Controladores_Texto.dart';
-
+//Widget Stateful que crea un menú desplegable para seleccionar la Edad.
+//Mantiene el estado de la opción seleccionada y actualiza el controlador de texto asociado.
 class Edad extends StatefulWidget {
   @override
   State<Edad> createState(){
     return StateEdad();
   }
 }
+//Gestiona el estado interno del widget Edad.
 class StateEdad extends State<Edad> {
+  //Instancia de la clase FormData para acceder a los controladores de texto.
   final FormData formData = FormData(); // Instancia del Singleton
   String? _EdadSeleccionada;
-
+ //opciones que el usuario podra seleccionar
   var _items = [
     '15-18 años', '19-22 años', '23-26 años', '27-30 años', '31-33 años',
     '34-37 años', '38-41 años', '42-45 años', '46-49 años', '50-53 años',
