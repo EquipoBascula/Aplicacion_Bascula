@@ -1,3 +1,4 @@
+//Importa bibliotecas para elementos de interfaz, navegación, un interruptor personalizado y widgets para la selección de opciones.
 import 'package:flutter/material.dart';
 import 'package:formulario/pantallas/formulario/form_parte2.dart';
 import 'package:formulario/pantallas/formulario/form_parte4.dart';
@@ -9,6 +10,7 @@ import 'package:formulario/pantallas/funciones/funciones_formulario/Seleccion_Ti
 class FormPart3 extends StatelessWidget {
   final FormData formData = FormData(); // Instancia del Singleton
   bool alergia = false;
+  //Variable booleana para almacenar si el usuario tiene alergias alimentarias.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -79,6 +81,7 @@ class FormPart3 extends StatelessWidget {
                       children: [
                         IconButton(
                           onPressed: () {
+                            //Utiliza Navigator.push() para navegar a otras pantallas.
                             Navigator.push(context, MaterialPageRoute(builder:
                                 (context) => FormPart2()));
                           },
@@ -91,6 +94,7 @@ class FormPart3 extends StatelessWidget {
                         IconButton(
                           onPressed: () {
                             if(alergia){
+                              //Utiliza Navigator.push() para navegar a otras pantallas.
                               Navigator.push(context, MaterialPageRoute(builder:
                                   (context) => FormPart4()));
                             }else{
