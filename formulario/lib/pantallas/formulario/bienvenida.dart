@@ -1,17 +1,21 @@
+//Importa la biblioteca material.dart para elementos de la interfaz de usuario 
+//y la pantalla Login.
 import 'package:flutter/material.dart';
 import 'package:formulario/pantallas/login.dart';
-
+//Widget Stateful que muestra una pantalla de bienvenida con un mensaje 
+//de texto y una imagen, y luego redirige a la pantalla de inicio de sesión.
 class Bienvenida extends StatefulWidget {
   const Bienvenida({Key? key}) : super(key: key);
 
   @override
   _BienvenidaState createState() => _BienvenidaState();
 }
-
+//Gestiona el estado interno del widget Bienvenida.
 class _BienvenidaState extends State<Bienvenida> {
   @override
   void initState() {
     super.initState();
+    //Llama al método _redirectToInicio() para iniciar la redirección automática a la pantalla de inicio de sesión.
     _redirectToInicio();
   }
 
