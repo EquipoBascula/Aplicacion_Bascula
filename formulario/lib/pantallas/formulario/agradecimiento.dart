@@ -1,11 +1,16 @@
+//Importa la biblioteca material.dart para elementos de la interfaz de usuario, 
+//la pantalla PantallaBascula, la clase EnvioDatosFormularioPrincipal para enviar datos 
+//a Supabase, y la clase FormData para gestionar datos del formulario.
 import 'package:flutter/material.dart';
 import 'package:formulario/pantallas/inicio_bascula/pantalla_bascula.dart';
 import 'package:formulario/supabase/EnvioDatos/EnvioDatosFormulario.dart';
 import 'package:formulario/pantallas/funciones/Controladores_Texto.dart';
-
+//Widget Stateless que muestra una pantalla de agradecimiento al usuario y envía 
+//los datos del formulario a Supabase.
 class Agradecimiento extends StatelessWidget {
   final FormData formData = FormData(); // Instancia del Singleton
   EnvioDatosFormularioPrincipal supabase = EnvioDatosFormularioPrincipal();
+  //Instancia de la clase EnvioDatosFormularioPrincipal para enviar datos a Supabase.
 
   @override
   Widget build(BuildContext context) {
