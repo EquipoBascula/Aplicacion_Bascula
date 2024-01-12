@@ -1,3 +1,4 @@
+//Importa bibliotecas para elementos de interfaz, navegación, gestión de fechas y formularios.
 import 'package:flutter/material.dart';
 import 'package:formulario/pantallas/Pantalla_inicio.dart';
 import 'package:formulario/pantallas/formulario/form_parte2.dart';
@@ -12,6 +13,7 @@ class FormPart1 extends StatelessWidget {
 
   final FormData formData = FormData(); // Instancia del Singleton
   var comFecha = new DatePicker();
+ // Instancia de la clase DatePicker para seleccionar la fecha de nacimiento.
 
   @override
   Widget build(BuildContext context) {
@@ -95,6 +97,7 @@ class FormPart1 extends StatelessWidget {
                         children: [
                           IconButton(
                             onPressed: () {
+                              //Utiliza Navigator.push() para navegar a otras pantallas.
                               Navigator.push(context, MaterialPageRoute(builder:
                                   (context) => PantallaInicio()));
                             },
@@ -107,6 +110,8 @@ class FormPart1 extends StatelessWidget {
                           IconButton(
                             onPressed: () {
                               if( formData.nombre_C.text.isEmpty || formData.fecha_C.text.isEmpty){
+                              //Al presionar el botón "Siguiente", se verifica que el nombre y la fecha de nacimiento 
+                                //no estén vacíos. Si falta alguno, muestra un mensaje de alerta.
                                 showDialog(
                                   context: context,
                                   builder: (context) {
