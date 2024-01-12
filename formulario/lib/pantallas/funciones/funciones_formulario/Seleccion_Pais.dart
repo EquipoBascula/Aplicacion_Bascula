@@ -1,17 +1,22 @@
+//Importa la biblioteca material.dart para elementos de la interfaz de usuario y 
+//la clase FormData para gestionar datos del formulario.
 import 'package:flutter/material.dart';
 import 'package:formulario/pantallas/funciones/Controladores_Texto.dart';
-
+//Widget Stateful que crea un menú desplegable para seleccionar el Pais.
+//Mantiene el estado de la opción seleccionada y actualiza el controlador de texto asociado.
 class Pais extends StatefulWidget {
   @override
   State<Pais> createState(){
     return StatePais();
   }
 }
+//Gestiona el estado interno del widget Pais.
 class StatePais extends State<Pais> {
+   //Instancia de la clase FormData para acceder a los controladores de texto.
   final FormData formData = FormData(); // Instancia del Singleton
 
   String? _PaisSeleccionado;
-
+//opciones que el usuario podra seleccionar
   var _items = ['México', 'Estados Unidos','Canadá','Francia','China','India','Reino Unido','Brasil','Japón','Rusia',
     'Alemania','Italia','España','Australia','Corea del Sur',];
 
