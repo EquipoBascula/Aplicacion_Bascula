@@ -1,13 +1,18 @@
+//Importa la biblioteca material.dart para elementos de la interfaz de usuario y 
+//la clase FormData para gestionar datos del formulario.
 import 'package:flutter/material.dart';
 import 'package:formulario/pantallas/funciones/Controladores_Texto.dart';
-
+//Widget Stateful que crea un menú desplegable para seleccionar la experiencia.
+//Mantiene el estado de la opción seleccionada y actualiza el controlador de texto asociado.
 class Experiencia extends StatefulWidget {
   @override
   State<Experiencia> createState(){
     return StateExperiencia();
   }
 }
+//Gestiona el estado interno del widget Experiencia.
 class StateExperiencia extends State<Experiencia> {
+  //Instancia de la clase FormData para acceder a los controladores de texto.
   final FormData formData = FormData(); // Instancia del Singleton
   String? _ExperienciaSeleccionada;
   var _items = ['Ninguna', '1 a 4 meses','5 a 6 meses', '9 meses a 1 año','2 a 3 años'];
