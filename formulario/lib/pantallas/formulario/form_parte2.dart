@@ -1,3 +1,4 @@
+//Importa bibliotecas para elementos de interfaz, navegación y widgets personalizados para la selección de opciones.
 import 'package:flutter/material.dart';
 import 'package:formulario/pantallas/formulario/form_parte3.dart';
 import 'package:formulario/pantallas/formulario/form_parte1.dart';
@@ -72,6 +73,7 @@ class FormPart2 extends StatelessWidget {
                         ),
                         IconButton(
                           onPressed: () {
+                           // Utiliza Navigator.push() para navegar a otras pantallas.
                             Navigator.push(context, MaterialPageRoute(builder:
                                 (context) => FormPart3()));
                           },
